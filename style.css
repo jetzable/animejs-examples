@@ -1,11 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+
+
+/* General styles */
 body {
   margin: 0;
+  font-family: 'Rationale', sans-serif;
 }
 
-.section-container-1 {
-  background: #050505 ;
-  height: 100vh;
-  width: 100%;
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 3rem;
+  padding: 4rem;
+  margin-top: 2rem;
+}
+
+.card {
+  height: 500px;
+  width: auto;
+  border-radius: 18px;
+  box-shadow: 5px 5px 14px -4px rgba(120,88,88,0.75);
+  -webkit-box-shadow: 5px 5px 14px -4px rgba(120,88,88,0.75);
+  -moz-box-shadow: 5px 5px 14px -4px rgba(120,88,88,0.75);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,8 +30,43 @@ body {
   padding: 2rem;
 }
 
-.section-container-1 a {
-  align-self: flex-start;
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 5px 5px 14px -4px rgba(120,88,88,0.75);
+  -webkit-box-shadow: 5px 5px 14px -4px rgba(120,88,88,0.75);
+  -moz-box-shadow: 5px 5px 14px -4px rgba(120,88,88,0.75);
+}
+
+a {
+  color: #050505;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #ff5f5f;
+  font-weight: 700;
+}
+
+a .link {
+  margin-left: 8px;
+}
+
+/* Outline text animated */
+
+.section-container-1 {
+  background: #050505 ; 
 }
   
 .my-path {
@@ -32,22 +84,9 @@ body {
     justify-content: center;
 }
 
-a {
-  text-decoration: underline;
-  font-size: 18px;
-  color: #cfc33a;
-}
-
-/* Contenedor para animación de letras saltando */
+/* Jumping letters one by one */
 .section-container-2 {
   background: #ff5f5f ;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
   color: white;
   font-style: italic;
 }
@@ -65,4 +104,79 @@ a {
 .ml6 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+/* Neon text animated */
+
+.wrapper {
+  width: 60%;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.section-container-3 {
+  background: black;
+}
+
+.st0{ fill:#29ABE2; }
+.st1{
+  fill:none;
+  stroke:#FF00DB;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:0,25,175;
+}
+.st2{
+  fill:none;
+  stroke:#2E00ED;
+  stroke-width:4;
+  stroke-miterlimit:100;
+  stroke-dasharray:0,54,101;
+}
+.st3{
+  fill:none;
+  stroke:#F70285;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:100;
+  stroke-dasharray:0,37,129;
+}
+.st4{
+  fill:none;
+  stroke:#FF0400;
+  stroke-width:8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:0,36,136;
+}
+.st5{
+  fill:none;
+  stroke:#FFFFFF;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:0,36,136;
+}
+
+/* Infinite loop animation, random colors */
+
+.loop-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1px;
+  height: 100%;
+}
+
+.el {
+  position: absolute;
+  opacity: 1;
+  width: 3px;
+  height: 20%;
+  margin-top: -12vh;
+  transform-origin: 50% 100%;
+  background: white;
 }
