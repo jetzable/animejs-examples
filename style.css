@@ -1,18 +1,68 @@
 body {
-    background: #050505;
-  }
-  
-  .my-path {
-    fill:none;
-    stroke:#cfc33a;
-    stroke-width:4;
-  }
+  margin: 0;
+}
 
-  #lineDrawing {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-  }
+.section-container-1 {
+  background: #050505 ;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.section-container-1 a {
+  align-self: flex-start;
+}
+  
+.my-path {
+  fill:none;
+  stroke:#cfc33a;
+  stroke-width:4;
+}
+
+#lineDrawing {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+  text-decoration: underline;
+  font-size: 18px;
+  color: #cfc33a;
+}
+
+/* Contenedor para animación de letras saltando */
+.section-container-2 {
+  background: #ff5f5f ;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  font-style: italic;
+}
+
+.ml6 {
+  font-size: 3.3em;
+  width: 75%;
+  word-break: keep-all;
+}
+
+.ml6 .text-wrapper {
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
